@@ -1,0 +1,30 @@
+.item {
+    cursor: pointer;
+    list-style: none;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: -150%;
+    transform: translateY(0);
+    transition: .3s all;
+    right: 30px;
+}
+
+.item.carousel-item-prev {
+    top: 0;
+}
+
+.item.carousel-item-next {
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+.item.carousel-item-active {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item.carousel-item-active ~ li:not(.carousel-item-next) {
+    top: 150%;
+}
